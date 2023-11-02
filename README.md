@@ -19,6 +19,12 @@ pip install -U git+https://github.com/adjscent/cmdutil@master
 cmdutil checkport 80
 ```
 
+Update
+
+```bash
+pip install -U git+https://github.com/adjscent/cmdutil@master
+```
+
 Uninstall
 
 ```bash
