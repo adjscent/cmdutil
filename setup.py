@@ -14,10 +14,6 @@ setup(
     description="command line utility written in Python that performs os functions",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    entry_points={
-        "console_scripts": [
-            "cmdutil = cmdutil.cli:main",
-        ],
-    },
+    entry_points={"console_scripts": ["cmdutil = cmdutil.cli:main"]},
     install_requires=[],
 )
