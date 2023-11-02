@@ -34,3 +34,5 @@ pip uninstall cmdutil
 ## Supported commands
 
 - checkport [port] (checks for a local process listening to the port)
+- memory (checks for memory usage)
+- process (checks for current processes)
