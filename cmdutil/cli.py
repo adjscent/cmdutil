@@ -1,4 +1,5 @@
 import argparse
+
 from . import commands
 
 command_list = ["checkport", "process", "memory"]

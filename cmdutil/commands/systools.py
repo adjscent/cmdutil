@@ -1,4 +1,5 @@
-from .util import OperatingSystem, execute_command, print_not_implemented, check_os
+from .util import (OperatingSystem, check_os, execute_command,
+                   print_not_implemented)
 
 
 def check_port(port: int) -> None:

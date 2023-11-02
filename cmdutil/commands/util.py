@@ -1,6 +1,8 @@
 import enum
 import platform
 import subprocess
+import sys
+from typing import Optional
 
 from .config import get_debug
 
@@ -24,7 +26,7 @@ def check_os() -> OperatingSystem:
         return OperatingSystem.OTHER
 
 
-def execute_command(command: str, input_data: str = None) -> int:
+def execute_command(command: str, input_data: Optional[str] = None) -> int:
     if get_debug():
         print(f"Executing command: {command}")
 

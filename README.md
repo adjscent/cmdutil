@@ -36,3 +36,18 @@ pip uninstall cmdutil
 - checkport [port] (checks for a local process listening to the port)
 - memory (checks for memory usage)
 - process (checks for current processes)
+
+
+## Development
+
+To develop this utility, run the following command:
+
+```bash
+make install-dev
+```
+
+To lint this utility, run the following command:
+
+```bash
+make lint
+```
