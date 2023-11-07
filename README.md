@@ -22,6 +22,7 @@ cmdutil checkport 80
 Update
 
 ```bash
+pip uninstall cmdutil
 pip install -U git+https://github.com/adjscent/cmdutil@master
 ```
 
@@ -40,7 +41,7 @@ pip uninstall cmdutil
 
 ## Development
 
-To develop this utility, run the following command:
+To develop this utility, run the following command to install dependencies:
 
 ```bash
 make install-dev
