@@ -16,7 +16,7 @@ python -m cmdutil.cli checkport 80
 Installed
 
 ```bash
-pip install -U git+https://github.com/adjscent/cmdutil@master
+pip install -U -e git+https://github.com/adjscent/cmdutil@master
 cmdutil checkport 80
 ```
 
@@ -24,7 +24,7 @@ Update
 
 ```bash
 pip uninstall cmdutil
-pip install -U git+https://github.com/adjscent/cmdutil@master
+pip install -U -e git+https://github.com/adjscent/cmdutil@master
 ```
 
 Uninstall

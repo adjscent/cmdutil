@@ -2,7 +2,7 @@ import argparse
 
 from . import commands
 
-command_list = ["checkport", "process", "memory"]
+command_list = ["version", "update", "checkport", "process", "memory"]
 
 
 def setup_parser():
@@ -28,7 +28,11 @@ def main():
     command = args.command
     commands.set_debug(args.debug)
 
-    if command == "checkport":
+    if command == "version":
+        commands.print_not_implemented()
+    elif command == "update":
+        commands.print_not_implemented()
+    elif command == "checkport":
         parser = argparse.ArgumentParser(
             description="A utility to run OS specific commands."
         )
