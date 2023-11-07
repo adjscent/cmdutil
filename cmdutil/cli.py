@@ -7,17 +7,15 @@ command_list = ["version", "update", "checkport", "process", "memory"]
 
 def setup_parser():
     parser = argparse.ArgumentParser(
-        description="A utility to run OS specific commands."
+        prog="cmdutil", description="A utility to run OS specific commands."
     )
-    # parser.add_argument('-d', '--debug', type=str, help='Debug mode.')
     parser.add_argument("-d", "--debug", action="store_true", help="Enable debug mode")
-    # parser.add_argument('-os', '--operating-system', type=str, choices=['windows', 'linux', 'mac'], help='The operating system.')
-    parser.add_argument(
-        "command", type=str, help="The command to run.", choices=command_list
-    )
-    parser.add_argument(
-        "parameters", type=str, nargs="*", help="The parameters of the command."
-    )
+    subparsers = parser.add_subparsers(help=f"command to execute", dest="command")
+    for cmd in command_list:
+        subparsers.add_parser(cmd)
+    parser_checkport = subparsers.add_parser("checkport")
+    parser_checkport.add_argument("port", type=int, help="port number to check")
+
     return parser
 
 
@@ -33,12 +31,6 @@ def main():
     elif command == "update":
         commands.print_not_implemented()
     elif command == "checkport":
-        parser = argparse.ArgumentParser(
-            description="A utility to run OS specific commands."
-        )
-        parser.add_argument("command", type=str, help="The command to run.")
-        parser.add_argument("port", type=int, help="port to check.")
-        args = parser.parse_args()
         commands.check_port(args.port)
     elif command == "process":
         commands.process()
