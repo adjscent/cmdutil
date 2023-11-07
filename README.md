@@ -1,4 +1,5 @@
 # cmdutil 
+[![Python Package CI](https://github.com/adjscent/cmdutil/actions/workflows/python-package-ci.yml/badge.svg)](https://github.com/adjscent/cmdutil/actions/workflows/python-package-ci.yml)
 
 This is a command line utility written in Python that performs os functions
 
