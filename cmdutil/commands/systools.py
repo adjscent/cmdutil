@@ -1,8 +1,7 @@
 import re
 import subprocess
 
-from .util import (OperatingSystem, check_os, execute_command,
-                   print_not_implemented)
+from .util import OperatingSystem, check_os, execute_command, print_not_implemented
 
 
 def check_port(port: int) -> None:
